@@ -10,9 +10,9 @@ class Buttons extends StatelessWidget {
     return ElevatedButton(
         child: Text(textButton),
         style: ElevatedButton.styleFrom(
-            // primary: Color.fromARGB(255, 255, 201, 136),
-            // onPrimary: Color(0xFFFEFCF3),
-            ),
+          primary: Color.fromARGB(255, 255, 201, 136),
+          onPrimary: Color(0xFFFEFCF3),
+        ),
         onPressed: () {});
   }
 }
