@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Buttons extends StatelessWidget {
+class Button2 extends StatelessWidget {
   final String textButton;
   // final VoidCallback buttonColor;
 
-  Buttons(this.textButton);
+  Button2(this.textButton);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,9 @@ class Buttons extends StatelessWidget {
       child: ElevatedButton(
           child: Text(
             textButton,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Color.fromARGB(255, 7, 255, 209),
+                fontWeight: FontWeight.bold),
           ),
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './buttons.dart';
+import './button2.dart';
+import './button3.dart';
 
 void main(List<String> args) {
   runApp(MyApps());
@@ -20,13 +22,18 @@ class MyAppState extends State<MyApps> {
     return MaterialApp(
         // theme: ThemeData(useMaterial3: true),
         home: Scaffold(
+      backgroundColor: Color(0xff22252D),
       appBar: AppBar(
+        backgroundColor: Color(0xff292D36),
         title: Center(
-          child: Text('Calculator'),
+          child: Text(
+            'Calculator',
+            style: TextStyle(color: Color(0xffFFFFFF)),
+          ),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(8),
+            bottom: Radius.circular(3),
           ),
         ),
       ),
@@ -35,58 +42,78 @@ class MyAppState extends State<MyApps> {
         children: [
           Container(
             alignment: Alignment.topCenter,
-            padding: EdgeInsets.only(top: 15, bottom: 15),
+            padding: EdgeInsets.only(top: 15, bottom: 5),
             child: SizedBox(
               height: 150,
               width: 400,
               child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                color: Color.fromARGB(255, 163, 226, 255),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(18),
+                // ),
+                color: Color.fromARGB(255, 56, 57, 60),
                 elevation: 10,
               ),
             ),
           ),
           Container(
-            child: Row(
-              children: [
-                Buttons('7'),
-                Buttons('8'),
-                Buttons('9'),
-                Buttons('+'),
-              ],
+            margin: EdgeInsets.only(right: 20),
+            padding: EdgeInsets.all(5),
+            alignment: Alignment.topRight,
+            child: TextButton(
+              child: Text(
+                'Reset',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 220, 66, 66),
+                ),
+              ),
+              onPressed: () {},
             ),
           ),
           Container(
-            child: Row(
-              children: [
-                Buttons('4'),
-                Buttons('5'),
-                Buttons('6'),
-                Buttons('x'),
-              ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: [
-                Buttons('1'),
-                Buttons('2'),
-                Buttons('3'),
-                Buttons('-'),
-              ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: [
-                Buttons('0'),
-                Buttons('-'),
-                Buttons('='),
-                Buttons('+'),
-              ],
-            ),
+            color: Color(0xff292D36),
+            child: Column(children: [
+              Container(
+                child: Row(
+                  children: [
+                    Buttons('7'),
+                    Buttons('8'),
+                    Buttons('9'),
+                    Button3('+'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Buttons('4'),
+                    Buttons('5'),
+                    Buttons('6'),
+                    Button3('x'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Buttons('1'),
+                    Buttons('2'),
+                    Buttons('3'),
+                    Button3('-'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Buttons('0'),
+                    Buttons('.'),
+                    Button2('='),
+                    Button3('+'),
+                  ],
+                ),
+              )
+            ]),
           )
         ],
       ),
