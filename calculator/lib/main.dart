@@ -4,24 +4,34 @@ import './button2.dart';
 import './button3.dart';
 
 void main(List<String> args) {
-  runApp(MyApps());
+  runApp(MyApp());
 }
 
-class MyApps extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return MyAppState();
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Calc',
+      // theme: ThemeData(useMaterial3: true),
+      home: new MyHomePage(title: 'Calculator'),
+    );
   }
 }
 
-class MyAppState extends State<MyApps> {
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  MyHomePageState createState() => new MyHomePageState();
+}
+
+class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
-        // theme: ThemeData(useMaterial3: true),
-        home: Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xff22252D),
       appBar: AppBar(
         backgroundColor: Color(0xff292D36),
@@ -72,6 +82,7 @@ class MyAppState extends State<MyApps> {
           ),
           Container(
             color: Color(0xff292D36),
+            padding: EdgeInsets.only(bottom: 19),
             child: Column(children: [
               Container(
                 child: Row(
@@ -79,7 +90,7 @@ class MyAppState extends State<MyApps> {
                     Buttons('7'),
                     Buttons('8'),
                     Buttons('9'),
-                    Button3('+'),
+                    Button3('/'),
                   ],
                 ),
               ),
@@ -117,6 +128,6 @@ class MyAppState extends State<MyApps> {
           )
         ],
       ),
-    ));
+    );
   }
 }

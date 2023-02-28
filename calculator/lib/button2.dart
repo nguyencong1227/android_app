@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 
 class Button2 extends StatelessWidget {
   final String textButton;
-  // final VoidCallback buttonColor;
+  // final VoidCallback buttonPressed;
 
+  // Button2(this.textButton,this.buttonPressed);
   Button2(this.textButton);
 
   @override
