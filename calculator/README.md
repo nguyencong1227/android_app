@@ -1,3 +1,3 @@
 ## Images
-
-![This is a alt text.](./prev.png "This is a sample image.")
+Ảnh ví dụ 
+![A Calculator.](./prev.png "This is a sample image.")
