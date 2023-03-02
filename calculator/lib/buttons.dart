@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
   final String textButton;
-  // final VoidCallback buttonPressed;
+  final VoidCallback buttonPressed;
 
-  Buttons(this.textButton);
-  // Buttons(this.textButton, this.buttonPressed);
+  // Buttons(this.textButton);
+  Buttons(this.textButton, this.buttonPressed);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Buttons extends StatelessWidget {
             primary: Color.fromARGB(255, 33, 36, 42),
             onPrimary: Color(0xFFFEFCF3),
           ),
-          onPressed: () {}),
+          onPressed: buttonPressed),
     );
   }
 }
