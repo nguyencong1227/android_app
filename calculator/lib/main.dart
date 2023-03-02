@@ -57,6 +57,21 @@ class MyHomePageState extends State<MyHomePage> {
               height: 150,
               width: 400,
               child: Card(
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 68,
+                    right: 10,
+                  ),
+                  // padding: EdgeInsets.only(bottom: ),
+                  child: Text(
+                    'he',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 66),
+                    textAlign: TextAlign.right,
+                  ),
+                ),
                 // shape: RoundedRectangleBorder(
                 //   borderRadius: BorderRadius.circular(18),
                 // ),
@@ -87,9 +102,9 @@ class MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Row(
                   children: [
-                    Buttons('7'),
-                    Buttons('8'),
-                    Buttons('9'),
+                    Buttons('7', () {}),
+                    Buttons('8', () {}),
+                    Buttons('9', () {}),
                     Button3('/'),
                   ],
                 ),
@@ -97,9 +112,9 @@ class MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Row(
                   children: [
-                    Buttons('4'),
-                    Buttons('5'),
-                    Buttons('6'),
+                    Buttons('4', () {}),
+                    Buttons('5', () {}),
+                    Buttons('6', () {}),
                     Button3('x'),
                   ],
                 ),
@@ -107,9 +122,11 @@ class MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Row(
                   children: [
-                    Buttons('1'),
-                    Buttons('2'),
-                    Buttons('3'),
+                    Buttons('1', () {
+                      String output = '1';
+                    }),
+                    Buttons('2', () {}),
+                    Buttons('3', () {}),
                     Button3('-'),
                   ],
                 ),
@@ -117,8 +134,8 @@ class MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Row(
                   children: [
-                    Buttons('0'),
-                    Buttons('.'),
+                    Buttons('0', () {}),
+                    Buttons('.', () {}),
                     Button2('='),
                     Button3('+'),
                   ],
