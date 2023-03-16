@@ -1,0 +1,1 @@
+Nhung thu ngoai le duoc luu o day
