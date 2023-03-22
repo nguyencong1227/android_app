@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:todoapp/src/features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
+import 'package:todoapp/src/features/authentication/screens/splash_screen/splash_screen.dart';
+import 'package:todoapp/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'src/utils/theme/theme.dart';
 
 
@@ -11,61 +15,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp (
       theme: TAppTheme.lightTheme,
-      darkTheme: TAppTheme.dartTheme,
+      darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: AppHome(),
+      home: SplashScreen(),
     );
   }
 }
 
-
-class AppHome extends StatelessWidget {
-  const AppHome({Key? key}) : super(key: key);
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: const Text(".appable/"),
-          leading: const Icon(Icons.ondemand_video)),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add_shopping_cart_outlined),
-        onPressed: () {},
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: ListView(
-          children: [
-            Text(
-              "Heading",
-              style: Theme.of(context).textTheme.headline2,
-            ),
-            Text(
-              "Sub-heading",
-              style: Theme.of(context).textTheme.subtitle2,
-            ),
-            Text(
-              "Paragraph",
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Elevated Button"),
-            ),
-            OutlinedButton(
-              onPressed: () {},
-              child: const Text("Outlined Button"),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Image(image: AssetImage("assets/images/books.png")),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}

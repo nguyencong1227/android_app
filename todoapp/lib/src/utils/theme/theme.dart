@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todoapp/src/utils/theme/widget_themes/Outlined_button_theme.dart';
+import 'package:todoapp/src/utils/theme/widget_themes/elevated_button_theme.dart';
 import './widget_themes/text_theme.dart';
 
 class TAppTheme {
@@ -6,22 +8,17 @@ class TAppTheme {
 
 
   static ThemeData lightTheme = ThemeData(
-    primarySwatch: Colors.yellow,
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTextTheme,
-    appBarTheme: AppBarTheme(),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(),
-    elevatedButtonTheme:
-    ElevatedButtonThemeData(style: ElevatedButton.styleFrom()),
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
   );
 
 
   static ThemeData darkTheme = ThemeData(
-    primarySwatch: Colors.yellow,
     brightness: Brightness.dark,
     textTheme: TTextTheme.darkTextTheme,
-    appBarTheme: AppBarTheme(),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(),
-    elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom()),
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
   );
 }
