@@ -3,9 +3,9 @@ import 'package:todoapp/src/constants/image_strings.dart';
 import 'package:todoapp/src/constants/sizes.dart';
 import 'package:todoapp/src/constants/text_strings.dart';
 
-import 'login_footer_widget.dart';
-import 'login_form_widget.dart';
-import 'login_header_widget.dart';
+import 'widgets/login_footer_widget.dart';
+import 'widgets/login_form_widget.dart';
+import 'widgets/login_header_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

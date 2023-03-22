@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/src/utils/theme/widget_themes/Outlined_button_theme.dart';
 import 'package:todoapp/src/utils/theme/widget_themes/elevated_button_theme.dart';
+import 'package:todoapp/src/utils/theme/widget_themes/text_field_theme.dart';
 import './widget_themes/text_theme.dart';
 
 class TAppTheme {
@@ -12,6 +13,7 @@ class TAppTheme {
     textTheme: TTextTheme.lightTextTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
   );
 
 
@@ -20,5 +22,6 @@ class TAppTheme {
     textTheme: TTextTheme.darkTextTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
   );
 }

@@ -8,6 +8,7 @@ import 'package:todoapp/src/constants/image_strings.dart';
 import 'package:todoapp/src/constants/sizes.dart';
 import 'package:todoapp/src/constants/text_strings.dart';
 import 'package:todoapp/src/features/authentication/screens/login/login_screen.dart';
+import 'package:todoapp/src/features/authentication/screens/signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                     const SizedBox(width: 10.0),
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => Get.to(() => const SignupScreen()),
                         child: Text(tSignup.toUpperCase()),
                       ),
                     ),
