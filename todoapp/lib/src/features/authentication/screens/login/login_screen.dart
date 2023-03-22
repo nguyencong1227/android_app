@@ -3,6 +3,7 @@ import 'package:todoapp/src/constants/image_strings.dart';
 import 'package:todoapp/src/constants/sizes.dart';
 import 'package:todoapp/src/constants/text_strings.dart';
 
+import '../../../../common_widgets/form/form_header_widget.dart';
 import 'widgets/login_footer_widget.dart';
 import 'widgets/login_form_widget.dart';
 import 'widgets/login_header_widget.dart';
@@ -21,7 +22,11 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                LoginHeaderWidget(size: size),
+                FormHeaderWidget(
+                  image: tWelcomeScreenImage,
+                  title: tLoginTitle,
+                  subTitle: tLoginSubTitle,
+                ),
                 const LoginForm(),
                 const LoginFooterWidget(),
               ],
