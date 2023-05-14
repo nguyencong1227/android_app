@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:todoapp/src/common_widgets/form/form_header_widget.dart';
 import 'package:todoapp/src/constants/sizes.dart';
 import 'package:todoapp/src/constants/text_strings.dart';
+import 'package:todoapp/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 
 import '../../../../../constants/image_strings.dart';
 
@@ -10,35 +13,45 @@ class ForgetPasswordMailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(tDefaultSize),
-          child: Column(
-            children: [
-              const SizedBox(height: tDefaultSize * 4,),
-              const FormHeaderWidget(
-                  image: tForgetPasswordImage,
-                  subTitle: tForgetMailSubTitle,
-                  title: tForgetPassWordTitle,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                heightBetween: 30.0,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: tFormHeight,),
-              Form(
-                child: Column(
-                  children: [
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        label: Text(tEmail),
-                        hintText: tEmail,
-                      ),
-                    )
-                  ],
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(tDefaultSize),
+            child: Column(
+              children: [
+                const SizedBox(height: tDefaultSize * 4,),
+                const FormHeaderWidget(
+                    image: tForgetPasswordImage,
+                    subTitle: tForgetMailSubTitle,
+                    title: tForgetPassWordTitle,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  heightBetween: 30.0,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+                const SizedBox(height: tFormHeight,),
+                Form(
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          label: Text(tEmail),
+                          hintText: tEmail,
+                          prefixIcon: Icon(Icons.mail_outline_rounded)
+                        ),
+                      ),
+                      const SizedBox(height: 20.0,),
+                      SizedBox( width: double.infinity,
+                          child: ElevatedButton(onPressed: () {
+                            Get.to(OTPScreen());
+                          },
+                              child: const Text(tNext))
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

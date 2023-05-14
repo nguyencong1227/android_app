@@ -10,6 +10,7 @@ const String tEmail = "E-Mail";
 const String tPassword = "Password";
 const String tFullName = "Full Name";
 const String tPhoneNo = "Phone No";
+const String tNext = "Next";
 
 
 // -- On Boarding Text
@@ -39,6 +40,7 @@ const String tSignInWithGoogle = "Sign In With Google";
 const String tSignUpTitle = "Get On Board!";
 const String tSignupSubTitle = "Create your profile to start your Journey";
 const String tAlreadyHaveAnAccount = "Already have an Account? ";
+const String tBirthday = "Birthday";
 
 // -- Forget Password Text
 const String tForgetPassWordTitle = "Make Selection!";
@@ -51,3 +53,8 @@ const String tForgetPhoneSubTitle = " Enter your registered Phone No to receive 
 
 // -- Forget Password Via E-Mail Text
 const String tForgetMailSubTitle = " Enter your registered E-Mail to receive OTP";
+
+// -- OTP Screen - Text
+const String tOtpTitle = "CO\nDE";
+const String tOtpSubTitle = "Verification";
+const String tOtpMessage = "Enter the verification code sent at";

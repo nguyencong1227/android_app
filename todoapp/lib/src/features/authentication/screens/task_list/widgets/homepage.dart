@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoapp/repository/authentication_repository/authentication_repository.dart';
 import '../models/tasks.dart';
 import './completed_task.dart';
 import './task_list.dart';
@@ -55,7 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () => _startAddNewTask(context),
+            onPressed: () {
+              AuthenticationRepository.instance.logout();
+            },
           ),
         ],
       ),
