@@ -1,6 +1,6 @@
 # Project Title
 
-simple calculator and task management app
+Simple overview of use/purpose.
 
 ## Description
 
